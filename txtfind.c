@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define WORD 30
-#define LINE 256
+#define LINE 257
 
 int similar (char *s, char *t);
 
@@ -14,7 +14,7 @@ int main() {
     char* option=" ";
     int wordLength=0;
 
-    gets(line); // gets the first line of the input txt-
+    fgets(line, LINE, stdin); // gets the first line of the input txt-
     // to get the word to look for, and the option of search (a/b)
     for(int i=0; i<LINE; i++){
  //       printf("word is %s \n", word);
@@ -29,7 +29,7 @@ int main() {
         }
     }
 
-    gets(line); //gets the second line of the input txt, which is always empty
+    fgets(line, LINE, stdin); //gets the second line of the input txt, which is always empty
 
 //    printf("option is %c \n", option);
     if(*(option)== 'a'){
