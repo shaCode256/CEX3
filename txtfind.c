@@ -29,19 +29,17 @@ int main() {
         }
     }
 
-
-
     gets(line); //gets the second line of the input txt, which is always empty
 
 //    printf("option is %c \n", option);
     if(*(option)== 'a'){
         ////PrintAllLinesContaining(*word);
-        gets(line); //gets the third line
+        fgets(line, LINE, stdin); //gets the third line
         while(!feof(stdin)){ // if it's not the end of file
             if(strstr(line, word)!= NULL){ // if this line contains the word we're looking for
                 printf(" %s \n",line);
             }
-            gets(line);
+            fgets(line, LINE, stdin);
         }
         if(strstr(line, word)!= NULL){ // if this line contains the word we're looking for
             printf(" %s \n",line);
