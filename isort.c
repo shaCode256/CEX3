@@ -37,16 +37,26 @@ int main() {
  //   }
 
 //    printf("Printf to the console \n");
-    int j=0;
-    int *arrNow= arrFifty;
-    printf("%d", *arrNow);
-    j++;
-    while (j < bSIZE) { //#bsize instead of 5
-        arrNow++;
-        j++;
-        printf(",%d", *arrNow);
-    }
 
+    int *arrNow= arrFifty;
+for (int k=0; k< bSIZE; k++){
+	if(k==bSIZE-1){
+	printf("%d", *(arrNow+k));
+	}
+	else{
+		printf("%d,", *(arrNow+k));
+	}
+}
+ //   int j=0;
+
+  ///  printf("first is %d \n", *arrNow);
+//	printf("%d", *arrNow);
+//	j++;
+ //   while (j < bSIZE) { //#bsize instead of 5
+ //       arrNow++;
+ //       j++;
+//		printf(",%d", *arrNow);
+ //   }
     return 0;
 }
 
