@@ -11,7 +11,7 @@ int main() {
 
     char line[LINE];
     char word[WORD];
-    char option="";
+    char* option=" ";
     int wordLength=0;
 
     gets(line); // gets the first line of the input txt-
@@ -20,7 +20,7 @@ int main() {
  //       printf("word is %s \n", word);
         if(*(line+i)==' '){ //if we got to the option, which is separated by space. take it and stop reading
             //as there's nothing else to read
-            option= *(line+i+1);
+            option= line+i+1;
             break;
         }
         else{ //else just for simplicity
@@ -34,7 +34,7 @@ int main() {
     gets(line); //gets the second line of the input txt, which is always empty
 
 //    printf("option is %c \n", option);
-    if(option== 'a'){
+    if(*(option)== 'a'){
         ////PrintAllLinesContaining(*word);
         gets(line); //gets the third line
         while(!feof(stdin)){ // if it's not the end of file
@@ -57,7 +57,7 @@ int main() {
         int i=0;
         int simNum=0;
         while (scanf("%c",&cha)!= EOF){ //for every char until the end of the input file
-            if(cha== ' ' || cha== '\n' || cha== '\t' || cha== '\0' || cha== "" || cha== "\0"){ //if it's the end of the word.
+            if(cha== ' ' || cha== '\n' || cha== '\t' || cha== '\0'){ //if it's the end of the word.
 			//	printf("767676767676766767");
                 //meaning WE GOT A WORD in our currWord char array.
 				if(cha == '\n'){

@@ -37,29 +37,26 @@ int main() {
  //   }
 
 //    printf("Printf to the console \n");
-    int j=1;
+    int j=0;
     int *arrNow= arrFifty;
     printf("%d", *arrNow);
+    j++;
     while (j < bSIZE) { //#bsize instead of 5
         arrNow++;
         j++;
         printf(",%d", *arrNow);
     }
 
-
-
-
     return 0;
 }
 
 ///////////////1)a.
-shift_element(int* arrP, int i){
+void shift_element(int* arrP, int i){
     printf("Got into the function \n");
     int* endP = arrP+i;
     //got a pointer to the end of an array
 //    printf("the last element in the arr is %d \n",*endP);
     while(i>0){     //while you still got more cells to move right
-        int toCopy= *arrP;
         printf(" The value in the array is  %d \n",*arrP);
         *endP=*(endP-1);
         endP--;
@@ -71,7 +68,7 @@ shift_element(int* arrP, int i){
 ///////////////1)b.
 // by insertion sort pseudo code
 
-insertion_sort(int* arr , int len){
+void insertion_sort(int* arr , int len){
     for(int i=0; i<len; i++){
         int key=*arr;
         int *j=arr-1;
